@@ -1,0 +1,27 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finder_smlm"
+version = "0.0.3"
+description = "FINDER algorithm for SMLM"
+readme = "README.md"
+authors = [{ name = "Andreas Nold"}, {name = "Pietro Verzelli"}]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+"matplotlib>=3.5.2",
+"numpy>=1.22.3",
+"pandas>=1.2.5",
+"seaborn>=0.11.0",
+"scikit-learn>=1.0.2"]
+
+
+requires-python = ">=3.8"
