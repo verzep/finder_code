@@ -47,14 +47,18 @@ To install FINDER on Google Colab:
 ---------------
 
 Using `FINDER` is really simple.
-To run the `FINDER` algorithm on your own localization data, add
+Here we provide a minimal working example in which we cluster some randomly generated data.
 
 ```python
 from finder import Finder
+import numpy as np
 
-FD      = Finder()
-labels  = FD.fit(XC)
-result_ = FD.selected_parameters
+XC = np.random.rand(100, 2) # generate random data to cluster
+
+FD = Finder() # define the model
+labels = FD.fit(XC) # fit the data, returning the labels
+result = FD.selected_parameters 
+print(result)
 ```
 
 to your code, analogous to DBSCAN in the `sklearn.cluster` package.
