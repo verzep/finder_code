@@ -73,7 +73,7 @@ class Finder:
 
         """
 
-        self.threshold = np.int(threshold)
+        self.threshold = threshold
         self.no_points_sigma = points_per_dimension
         self.no_points_thresholds = points_per_dimension
         self.algo = algo
@@ -590,9 +590,9 @@ class Finder:
 
         n = len(PS)
 
-        no_clusters = np.zeros(shape=(n,), dtype=np.int)
+        no_clusters = np.zeros(shape=(n,), dtype=int)
         similarityScore = np.zeros(shape=(n,))
-        # no_locs                  = np.zeros(shape=(n,),dtype=np.int)
+        # no_locs                  = np.zeros(shape=(n,),dtype=int)
         times = np.zeros(shape=(n,))
 
         # similarityScoreMatrix    = np.zeros(shape=(n,n))
@@ -610,7 +610,7 @@ class Finder:
         )
 
         for i, ps in PS.iterrows():
-            no_clusters[i] = np.int(np.max(ps["labels"]) + 1)
+            no_clusters[i] = int(np.max(ps["labels"]) + 1)
         PS["no_clusters"] = no_clusters
 
         # ***************************

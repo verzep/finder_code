@@ -73,10 +73,10 @@ def getSimilarityScoreByThreshold(XC, PS, clusterInfo, n_dim):
 
                     similarityScoreMatrix[
                         ps_index == j, ps_index == i
-                    ] = score  # /Normalize here?  eg  /np.int(np.max(PS.loc[j,"labels"]) + 1)
+                    ] = score  # /Normalize here?  eg  /int(np.max(PS.loc[j,"labels"]) + 1)
                     similarityScoreMatrix[
                         ps_index == i, ps_index == j
-                    ] = score  # /Normalize here?  eg  /np.int(np.max(PS.loc[i,"labels"]) + 1)
+                    ] = score  # /Normalize here?  eg  /int(np.max(PS.loc[i,"labels"]) + 1)
                 # else:
                 # we do not include similarity with self
 
@@ -175,10 +175,10 @@ def getSimilarityScore(XC, PS, clusterInfo, n_dim):
 
                 similarityScoreMatrix[
                     ps_index == j, ps_index == i
-                ] = score  # /Normalize here?  eg  /np.int(np.max(PS.loc[j,"labels"]) + 1)
+                ] = score  # /Normalize here?  eg  /int(np.max(PS.loc[j,"labels"]) + 1)
                 similarityScoreMatrix[
                     ps_index == i, ps_index == j
-                ] = score  # /Normalize here?  eg  /np.int(np.max(PS.loc[i,"labels"]) + 1)
+                ] = score  # /Normalize here?  eg  /int(np.max(PS.loc[i,"labels"]) + 1)
             # else:
             # we do not include similarity with self
 

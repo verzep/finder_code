@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "finder_smlm"
-version = "0.0.3"
+version = "0.0.4"
 description = "FINDER algorithm for SMLM"
 readme = "README.md"
 authors = [{ name = "Andreas Nold"}, {name = "Pietro Verzelli"}]
